@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>B站视频下载器</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="bg-img"></div>
+<div class="bg-overlay"></div>
+<div class="app">
+    <header>
+    <span class="brand">B站下载器</span>
+    <button id="settingsBtn" class="icon-btn" title="设置">&#9881; <span class="settings-label">设置下载地址</span></button>
+  </header>
+
+  <div class="hero-section">
+    <div class="hero-inner">
+      <h1 class="hero-title">B站视频下载器</h1>
+      <p class="hero-subtitle">贴入视频 BV 号，一键下载到本地</p>
+      <div class="input-row">
+        <input id="bvInput" type="text" placeholder="贴入 BV 号或视频链接">
+        <input id="folderInput" type="text" placeholder="文件夹名（可选，默认使用 BV 号）">
+        <button id="downloadBtn" class="primary-btn">下载</button>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="active">下载中</button>
+        <button class="tab" data-tab="done">已完成</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div id="tabActive" class="tab-content">
+      <div id="taskList" class="task-list"></div>
+    </div>
+    <div id="tabDone" class="tab-content hidden">
+      <div id="doneList" class="task-list"></div>
+    </div>
+  </div>
+
+  <footer>视频自动保存到设置的下载目录</footer>
+</div>
+
+<!-- Settings Modal -->
+<div id="settingsModal" class="modal-overlay hidden">
+  <div class="modal">
+    <h2>设置</h2>
+    <div class="form-group">
+      <label>下载保存目录</label>
+      <div class="path-row">
+        <input id="downloadPathInput" type="text" readonly>
+        <button id="changePathBtn" class="secondary-btn">更改目录</button>
+      </div>
+    </div>
+    <button id="closeSettingsBtn" class="primary-btn" style="margin-top:12px">关闭</button>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.spec
+
+# Project
+config.json
+downloads/
+
+# OS and IDE
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*.*~
+*.bak
+
+# Claude local config
+.claude/
